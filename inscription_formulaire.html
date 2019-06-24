@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Inscription</h1><br><hr>
+        <h2>Coordonnés</h2>
+        <form action="inscription.php" method="POST" novalidate> <!--novalidate pour debugger-->
+            <input type="radio" name="sexe" value="masculin" checked>M
+            <input type="radio" name="sexe" value="feminin">Mme
+            <br>
+            <!--nom et prenom-->
+            <label for="nom">Nom:</label>
+            <input type="text" name="nom" placeholder="Nom" required maxlength="100" id='nom'>
+            <label for="prenom">Prenom:</label>
+            <input type="text" name="prenom" placeholder="Prenom" required maxlength="100">
+            <br>
+             <!--addresse mail et numéro de télephone-->
+            <label for="addrmail">Addresse Mail:</label>
+            <input type="email" name="addrmail" placeholder="Adresse Mail" required maxlength="250">
+            <label for="numeroTel">Numéro de Téléphone:</label>
+            <input type="number" name="numeroTel" placeholder="Numéro tél">
+            <hr>
+            <!--pseudo et pwd-->
+            <h2>Informations de connexion</h2>
+            <label for="pseudo">Pseudo:</label>
+            <input type="text" name="pseudo" required placeholder="Pseudo" minlength="6" maxlength="10" ><br>
+            <label for="pwd">Mot de passe:</label>
+            <input type="password" name="pwd" required placeholder="au moins 8 caractères" minlength="8">
+            <label for="confirmpwd">Confirmer le mot de passe:</label>
+            <input type="password" name="confirmpwd" required placeholder="au moins 8 caractères" minlength="8"><br>
+            <hr>
+            <!--Divers et commentaires-->
+            <label for="checkboite">Abonnement à la newslettre:</label>
+            <input type="checkbox" name="checkboite" value="1"><br>
+            <label for="airetext">Commentaire:</label><br>
+            <textarea rows="4" cols="50" name="airetext" placeholder="Ecrire votre commentaire ici"></textarea><br>
+            <button type="submit" value="submit">S'inscrire</button>
+        </form>
+    </body>
+</html>
